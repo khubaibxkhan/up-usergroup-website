@@ -108,18 +108,18 @@ export const Navbar = () => {
           whileTap={{ scale: 0.95 }}
         >
           <button
-            className="relative bg-gradient-to-r from-blue-500 to-purple-500 
+            className="relative bg-gradient-to-r from-blue-500 to-blue-300 
                        text-white py-2 px-6 rounded-full font-medium
                        shadow-md transition-all duration-500
-                       hover:shadow-xl hover:from-purple-500 hover:to-blue-500
+                       hover:shadow-xl hover:from-blue-300 hover:to-blue-500
                        hover:scale-105 focus:outline-none"
           >
-            <a href="https://www.meetup.com/up-powerbiclub/">Join Us</a>
+          <a href="https://www.meetup.com/up-powerbiclub/">Join Us</a>
           </button>
         </motion.div>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden text-blue-400 hover:text-purple-300">
+        <div className="md:hidden text-blue-500 hover:text-blue-300">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -134,7 +134,7 @@ export const Navbar = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="md:hidden bg-black/90 backdrop-blur-md text-white uppercase text-sm tracking-wider px-6 py-6 space-y-5"
+            className="md:hidden bg-black/70 backdrop-blur-md text-white uppercase text-sm tracking-wider px-6 py-6 space-y-5"
           >
             {links.map((link, idx) => (
               <motion.div
@@ -154,17 +154,21 @@ export const Navbar = () => {
             ))}
 
             {/* Mobile Button */}
+
+            <a href="https://www.meetup.com/up-powerbiclub/" target="_blank" rel="noopener noreferrer">
             <motion.button
+              
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full relative bg-gradient-to-r from-blue-500 to-purple-500 
+              className="w-full relative bg-gradient-to-r from-blue-500 to-blue-300 
                          text-white px-5 py-2 rounded-full font-semibold text-sm
                          shadow-md transition-all duration-500
-                         hover:shadow-xl hover:from-purple-500 hover:to-blue-500
+                         hover:shadow-xl hover:from-blue-300 hover:to-blue-500
                          hover:scale-105 focus:outline-none"
             >
-              Join Us
+             Join Us
             </motion.button>
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
