@@ -114,7 +114,7 @@ export const Navbar = () => {
                        hover:shadow-xl hover:from-purple-500 hover:to-blue-500
                        hover:scale-105 focus:outline-none"
           >
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2eFOWo1-tg3415GIub6zA4LhOSeAW35FSe4pbOaAJ7W6Ew/viewform">Join Us</a>
+            <a href="https://www.meetup.com/up-powerbiclub/">Join Us</a>
           </button>
         </motion.div>
 
