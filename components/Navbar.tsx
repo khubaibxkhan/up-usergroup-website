@@ -61,12 +61,13 @@ export const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
         {/* Logo */}
-        <motion.div whileHover={{ scale: 1.1 }} className="cursor-pointer">
+        {/* Logo */}
+        <motion.div whileHover={{ scale: 1.05 }} className="cursor-pointer flex items-center">
           <Link href="/">
             <img
-              src="/logo.png"
+              src="/logo1.png"
               alt="Logo"
-              className="h-10 md:h-12 lg:h-14 w-auto"
+              className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto object-contain"
             />
           </Link>
         </motion.div>
