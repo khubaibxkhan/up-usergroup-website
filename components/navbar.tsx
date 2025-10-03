@@ -71,7 +71,7 @@ export const Navbar = () => {
         </motion.div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-10 text-white tracking-wide">
+        <div className="hidden md:flex space-x-10 text-black tracking-wide">
           {links.map((link, idx) => (
             <motion.div
               key={idx}
