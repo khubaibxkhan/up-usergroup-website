@@ -22,7 +22,7 @@ export const Navbar = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
+  transition: { duration: 0.6 },
     },
   };
 
@@ -38,7 +38,7 @@ export const Navbar = () => {
 
   const linkVariants = {
     hidden: { opacity: 0, y: 10 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
   };
 
   const links = [
@@ -82,7 +82,9 @@ export const Navbar = () => {
               }`}
             >
               <Link
-                href={link.path}// 👈 only Members in new tab
+                href={link.path}
+                target={link.name === "Members" ? "_blank" : undefined}
+                rel={link.name === "Members" ? "noopener noreferrer" : undefined}
               >
                 {link.name}
               </Link>

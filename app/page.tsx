@@ -1,5 +1,5 @@
 "use client";
-import navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar";
 
 
 
@@ -11,9 +11,9 @@ export default function Home() {
   return (
     <div>
       {/* Navbar stays fixed at the top */}
-      <navbar />
+      <Navbar />
       {/* Page content */}
-      <main className="">
+      <main>
         {/*  Add Hero Section later */}
         {/* Team Section */}
       </main>
