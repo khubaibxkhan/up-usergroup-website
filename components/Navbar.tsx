@@ -43,9 +43,10 @@ export const Navbar = () => {
 
   const links = [
     { name: "Home", path: "/" },
-    { name: "Members", path: "/members" },
+    { name: "About", path: "/about" },
     { name: "Events", path: "/events" },
-    { name: "Blogs", path: "/blogs" },
+    { name: "Teams", path: "/teams" },
+    { name: "Contact", path: "/contact" },
     { name: "Connect", path: "/connect" },
   ];
 
