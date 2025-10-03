@@ -79,7 +79,7 @@ export const Navbar = () => {
               variants={linkVariants}
               whileHover={{ scale: 1.1 }}
               className={`text-base transition-colors relative ${
-                pathname === link.path ? "text-purple-400" : ""
+                pathname === link.path ? "text-blue-400" : ""
               }`}
             >
               <Link
@@ -94,7 +94,7 @@ export const Navbar = () => {
               {pathname === link.path && link.name !== "Members" && (
                 <motion.span
                   layoutId="underline"
-                  className="absolute left-0 -bottom-1 h-[2px] w-full bg-purple-400 rounded"
+                  className="absolute left-0 -bottom-1 h-[2px] w-full bg-blue-400 rounded"
                 />
               )}
             </motion.div>
@@ -108,10 +108,10 @@ export const Navbar = () => {
           whileTap={{ scale: 0.95 }}
         >
           <button
-            className="relative bg-gradient-to-r from-purple-500 to-pink-500 
+            className="relative bg-gradient-to-r from-blue-500 to-purple-500 
                        text-white py-2 px-6 rounded-full font-medium
                        shadow-md transition-all duration-500
-                       hover:shadow-xl hover:from-pink-500 hover:to-purple-500
+                       hover:shadow-xl hover:from-purple-500 hover:to-blue-500
                        hover:scale-105 focus:outline-none"
           >
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2eFOWo1-tg3415GIub6zA4LhOSeAW35FSe4pbOaAJ7W6Ew/viewform">Join Us</a>
@@ -119,7 +119,7 @@ export const Navbar = () => {
         </motion.div>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden text-white hover:text-purple-300">
+        <div className="md:hidden text-blue-400 hover:text-purple-300">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -140,7 +140,7 @@ export const Navbar = () => {
               <motion.div
                 key={idx}
                 variants={linkVariants}
-                whileHover={{ scale: 1.05, color: "#a855f7" }}
+                whileHover={{ scale: 1.05, color: "#90D5FF" }}
                 onClick={() => setMenuOpen(false)}
               >
                 <Link
@@ -157,10 +157,10 @@ export const Navbar = () => {
             <motion.button
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full relative bg-gradient-to-r from-purple-500 to-pink-500 
+              className="w-full relative bg-gradient-to-r from-blue-500 to-purple-500 
                          text-white px-5 py-2 rounded-full font-semibold text-sm
                          shadow-md transition-all duration-500
-                         hover:shadow-xl hover:from-pink-500 hover:to-purple-500
+                         hover:shadow-xl hover:from-purple-500 hover:to-blue-500
                          hover:scale-105 focus:outline-none"
             >
               Join Us
