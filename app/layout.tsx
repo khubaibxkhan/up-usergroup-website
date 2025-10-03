@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 
 export const metadata: Metadata = {
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
       <html lang="en">
       <body className="font-poppins antialiased">
+        <Navbar />
         <div className="flex flex-col min-h-screen">
           <main className="flex-1">{children}</main>
         </div>
