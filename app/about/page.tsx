@@ -1,7 +1,7 @@
 "use client";
-import PowerBIHeroCarousel from "@/components/Banner";
+
 import Navbar from "@/components/Navbar";
-import Welcome from "@/components/Welcome";
+
 
 export default function about() {
   return (

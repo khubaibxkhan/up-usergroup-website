@@ -8,28 +8,28 @@ const slides = [
     title: "Microsoft Uttar Pradesh Power BI Club",
     subtitle: "Transform Data into Insights",
     description: "Join UP's largest Power BI community and become an expert in data visualization",
-    image: "/images/slide1.jpg", // Replace with your image path
+    image: "/images/slide1.jpg",
     gradient: "from-blue-900/80 via-purple-900/70 to-transparent"
   },
   {
     title: "Learn & Grow Together",
     subtitle: "Develop Your Skills with Us",
     description: "Take your Power BI skills to the next level with workshops, webinars, and hands-on sessions",
-    image: "/images/slide2.jpg", // Replace with your image path
+    image: "/images/slide2.jpg",
     gradient: "from-cyan-900/80 via-blue-900/70 to-transparent"
   },
   {
     title: "Join Our Community",
     subtitle: "Part of 500+ Data Enthusiasts",
     description: "Network with industry experts and fellow learners while working on real-world projects",
-    image: "/images/slide3.jpg", // Replace with your image path
+    image: "/images/slide3.jpg",
     gradient: "from-purple-900/80 via-pink-900/70 to-transparent"
   },
   {
     title: "Transform Your Career",
     subtitle: "Build Your Data Analytics Career",
     description: "Accelerate your career with Power BI certifications and practical experience",
-    image: "/images/slide4.jpg", // Replace with your image path
+    image: "/images/slide4.jpg",
     gradient: "from-emerald-900/80 via-teal-900/70 to-transparent"
   }
 ];
@@ -58,7 +58,7 @@ export default function PowerBIHeroCarousel() {
     setIsAutoPlaying(false);
   };
 
-  const goToSlide = (index: number) => {
+  const goToSlide = (index) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   };
@@ -70,7 +70,7 @@ export default function PowerBIHeroCarousel() {
   const current = slides[currentSlide];
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-gray-900">
+    <div className="relative w-full h-[40vh] sm:h-[60vh] md:h-[80vh] lg:h-[calc(100vh-4rem)] overflow-hidden bg-gray-900">
       {/* Image Slides */}
       {slides.map((slide, index) => (
         <div
@@ -94,33 +94,33 @@ export default function PowerBIHeroCarousel() {
 
       {/* Content Container */}
       <div className="relative h-full flex items-center px-4 sm:px-6 lg:px-16 xl:px-24">
-        <div className="max-w-3xl">
+        <div className="w-full sm:max-w-2xl lg:max-w-3xl">
           {/* Main Content */}
-          <div className="text-white space-y-6 animate-fade-in">
+          <div className="text-white space-y-1.5 sm:space-y-4 md:space-y-6 animate-fade-in">
             {/* Title */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight drop-shadow-2xl">
+            <h1 className="text-lg leading-tight sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold drop-shadow-2xl">
               {current.title}
             </h1>
 
             {/* Subtitle */}
-            <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white/90 drop-shadow-lg">
+            <p className="text-xs sm:text-xl md:text-2xl lg:text-3xl font-medium text-white/90 drop-shadow-lg">
               {current.subtitle}
             </p>
 
-            {/* Description */}
-            <p className="text-base sm:text-lg md:text-xl max-w-2xl text-white/80 leading-relaxed drop-shadow-md">
+            {/* Description - Hidden on mobile */}
+            <p className="hidden sm:block text-sm md:text-base lg:text-lg max-w-2xl text-white/80 leading-relaxed drop-shadow-md">
               {current.description}
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+            <div className="flex flex-row gap-2 sm:gap-4 pt-2 sm:pt-6">
               <button 
                 onClick={handleJoinClick}
-                className="px-8 py-4 bg-white text-gray-900 rounded-lg font-semibold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-2xl"
+                className="px-3 py-1.5 sm:px-8 sm:py-4 bg-white text-gray-900 rounded font-bold text-xs sm:text-lg hover:bg-gray-200 transition-colors duration-300"
               >
                 Join Us
               </button>
-              <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transform hover:scale-105 transition-all duration-300 backdrop-blur-sm">
+              <button className="px-3 py-1.5 sm:px-8 sm:py-4 bg-white/20 backdrop-blur-sm text-white rounded font-bold text-xs sm:text-lg hover:bg-white/30 transition-colors duration-300">
                 Learn More
               </button>
             </div>
@@ -128,10 +128,10 @@ export default function PowerBIHeroCarousel() {
         </div>
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows - Hidden on mobile */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-white/20 hover:bg-white/30 rounded-full backdrop-blur-md transition-all duration-300 text-white group z-10"
+        className="hidden md:block absolute left-4 md:left-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-white/20 hover:bg-white/30 rounded-full backdrop-blur-md transition-all duration-300 text-white group z-10"
         aria-label="Previous slide"
       >
         <ChevronLeft className="w-6 h-6 md:w-8 md:h-8 group-hover:scale-110 transition-transform" />
@@ -139,7 +139,7 @@ export default function PowerBIHeroCarousel() {
 
       <button
         onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-white/20 hover:bg-white/30 rounded-full backdrop-blur-md transition-all duration-300 text-white group z-10"
+        className="hidden md:block absolute right-4 md:right-8 top-1/2 -translate-y-1/2 p-3 md:p-4 bg-white/20 hover:bg-white/30 rounded-full backdrop-blur-md transition-all duration-300 text-white group z-10"
         aria-label="Next slide"
       >
         <ChevronRight className="w-6 h-6 md:w-8 md:h-8 group-hover:scale-110 transition-transform" />

@@ -176,7 +176,7 @@ export default function ConnectPage() {
         <footer className="relative z-10 bg-blue-50 border-t border-blue-200 py-6 px-4">
           <div className="max-w-2xl mx-auto text-center">
             <p className="text-gray-700 text-sm sm:text-base mb-2">
-              © 2024 Uttar Pradesh Power BI Club. All rights reserved.
+              © 2025 Uttar Pradesh Power BI Club. All rights reserved.
             </p>
             <p className="text-gray-600 text-xs sm:text-sm">
               Empowering data professionals across Uttar Pradesh
