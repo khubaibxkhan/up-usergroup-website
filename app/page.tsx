@@ -1,4 +1,5 @@
 "use client";
+import PowerBIHeroCarousel from "@/components/Banner";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       {/* Page content */}
       <main>
         {/*  Add Hero Section later */}
+        < PowerBIHeroCarousel />
         {/* Team Section */}
       </main>
     </div>
