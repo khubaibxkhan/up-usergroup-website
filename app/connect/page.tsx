@@ -119,7 +119,7 @@ export default function ConnectPage() {
                 className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors duration-300 font-semibold"
               >
                 <Mail className="w-5 h-5" />
-                <span className="text-base sm:text-lg">uppowerbiclub@gmail.com</span>
+                <span className="text-base sm:text-lg">Team@uppowerbiclub.com</span>
               </a>
             </div>
           </div>
